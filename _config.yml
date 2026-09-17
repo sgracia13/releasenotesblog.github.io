@@ -3,7 +3,7 @@ description: Field notes on shipping software from the product side.
 theme: minima
 
 # Your name shows up in the footer and the RSS feed.
-author: Your Name
+author: Sebastian Gracia
 
 # Files Jekyll should ignore when building the site.
 # _reference holds the React boilerplate and the neobrutalism stylesheet,
