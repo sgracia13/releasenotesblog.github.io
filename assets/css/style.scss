@@ -1,16 +1,10 @@
 ---
 ---
 
-// Neobrutalism skin for the minima theme.
-//
-// TO ACTIVATE: move this file to assets/css/style.scss
-// The two empty --- lines at the top are required. They tell Jekyll to process
-// this file rather than serve it raw. Delete them and nothing renders.
-
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&display=swap');
 
-$main: #ffdc58;   // primary fill — change this one value to rebrand
+$main: #ffdc58;
 $bg: #fef2e8;
 $border: #000000;
 $shadow: 4px 4px 0 $border;
@@ -33,13 +27,21 @@ h1, h2, h3, h4 {
   background: $bg;
 }
 
-.site-title,
-.site-title:visited {
+.site-title, .site-title:visited {
   font-weight: 900;
   color: $border;
 }
 
-// Post list entries become cards.
+.site-title::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  vertical-align: -6px;
+  background: url("/assets/icon.svg") no-repeat center / contain;
+}
+
 .post-list > li {
   background: #fff;
   border: 2px solid $border;
@@ -47,7 +49,6 @@ h1, h2, h3, h4 {
   box-shadow: $shadow;
   padding: 1.25rem;
   margin-bottom: 1.5rem;
-  transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
 .post-list > li:hover {
@@ -58,11 +59,11 @@ h1, h2, h3, h4 {
 .post-link {
   font-weight: 800;
   text-decoration: none;
+  color: $border;
 }
 
 blockquote {
   background: $main;
-  color: $border;
   border: 2px solid $border;
   border-left: 2px solid $border;
   border-radius: 6px;
@@ -70,17 +71,14 @@ blockquote {
   padding: 1rem 1.25rem;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: 0;
-}
-
-pre, code {
-  border: 2px solid $border;
-  border-radius: 6px;
+  color: $border;
 }
 
 pre {
   background: #000;
   color: #f5f5f5;
+  border: 2px solid $border;
+  border-radius: 6px;
   box-shadow: $shadow;
   padding: 1rem;
 }
@@ -88,25 +86,19 @@ pre {
 code {
   background: #88aaee;
   color: #000;
-  border-width: 1px;
+  border: 1px solid $border;
+  border-radius: 3px;
   padding: 0.1em 0.35em;
 }
 
-pre code {
-  background: none;
-  border: none;
-  color: inherit;
-  padding: 0;
-}
+pre code { background: none; border: none; color: inherit; padding: 0; }
 
 .site-footer {
   border-top: 2px solid $border;
   background: $main;
 }
 
-// Keyboard focus stays visible and obvious.
-a:focus-visible,
-button:focus-visible {
+a:focus-visible, button:focus-visible {
   outline: 3px solid #88aaee;
   outline-offset: 2px;
 }
