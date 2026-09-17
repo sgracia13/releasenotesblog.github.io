@@ -1,19 +1,3 @@
-# Blog setup
-
-This is a Jekyll blog. GitHub builds it for you — there is nothing to install
-and no build step to run.
-
-## One-time setup
-
-1. Create a repo named `yourusername.github.io` (your real GitHub username).
-   Naming it this way puts the site at the root, so there's no subfolder path
-   to configure.
-2. Upload everything in this folder to the repo.
-3. Open `_config.yml` and change `title`, `description`, and `author`.
-4. Repo → **Settings** → **Pages** → Source → **Deploy from a branch** →
-   `main` → `/ (root)` → Save.
-5. Wait about a minute, then load `yourusername.github.io`.
-
 ## Publishing a post
 
 Add a file to `_posts/` named `YYYY-MM-DD-some-slug.md`:
