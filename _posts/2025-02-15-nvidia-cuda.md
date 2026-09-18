@@ -12,7 +12,7 @@ We know now that a GPU is very important for AI. So what the hell is the Compute
 
 CUDA is how you tell it. It's the translator that sits between the code a person writes and the chip that does the work.
 
-Here's the part most people get wrong. When you picture someone building AI, you probably picture them typing in Python, and that's true. But Python isn't what the GPU understands. Python goes to a toolkit, the toolkit goes to CUDA, and CUDA is what actually speaks to the chip. It's less like a phone call and more like a relay. Each layer hands off to the next one, and CUDA is the last hop before the hardware.
+When you picture someone building AI, you probably picture them typing in Python, and that's true. But Python isn't what the GPU understands. Python goes to a toolkit, the toolkit goes to CUDA, and CUDA is what actually speaks to the chip. It's less like a phone call and more like a relay. Each layer hands off to the next one, and CUDA is the last hop before the hardware.
 
 NVIDIA's real advantage is that for almost twenty years, everything built for AI has been built on top of CUDA. Other companies have their own versions and they're getting better, but they're playing catch up on two decades of work. So when someone says "we'll just switch to a cheaper chip," the chip was never the hard part. The twenty years of stuff built on top of it is the hard part.
 
