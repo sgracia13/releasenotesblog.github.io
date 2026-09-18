@@ -1,8 +1,11 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+// Font import must be the first rule in the compiled CSS, so it goes above the
+// theme import. Browsers ignore an @import that appears after other rules.
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&display=swap');
+
+@import "{{ site.theme }}";
 
 $main: #ffdc58;
 $bg: #fef2e8;
@@ -27,19 +30,51 @@ h1, h2, h3, h4 {
   background: $bg;
 }
 
+// Title, icon and description sit together on the left; nav stays on the right.
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.site-logo {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
 .site-title, .site-title:visited {
+  display: block;
+  float: none;
+  margin-bottom: 0;
   font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   color: $border;
 }
 
-.site-title::before {
-  content: "";
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  margin-right: 10px;
-  vertical-align: -6px;
-  background: url("/assets/icon.svg") no-repeat center / contain;
+.site-description {
+  margin: 3px 0 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.site-nav {
+  float: none;
+  line-height: 1.5;
 }
 
 .post-list > li {
