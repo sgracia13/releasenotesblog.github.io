@@ -23,8 +23,10 @@ appear. This is the single most common reason a post doesn't show up.
 - Press `.` in any GitHub repo to open a full VS Code editor in the browser,
   with live Markdown preview. Much better than the plain file editor for
   anything longer than a paragraph.
-- Images go in an `images/` folder at the root; reference them as
-  `/images/thing.png`.
+- Images go in an `images/` folder at the root. Reference them as
+  `![alt]({{ "/images/thing.png" | relative_url }})`. A bare `/images/thing.png`
+  404s: this site is served from `/releasenotesblog.github.io/`, not the domain
+  root, and `relative_url` is what prepends that prefix.
 - Drafts go in a `_drafts/` folder with no date in the filename. They won't be
   published.
 
