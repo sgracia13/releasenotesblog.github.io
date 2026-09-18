@@ -1,0 +1,17 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  {%- comment -%}
+    GitHub Pages serves assets with max-age=600 and the stylesheet URL never
+    changes, so a browser will keep showing the previous CSS for ten minutes
+    after a deploy. The ?v= stamp changes on every build, which forces a
+    refetch immediately.
+  {%- endcomment -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}?v={{ site.time | date: '%s' }}">
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+</head>
