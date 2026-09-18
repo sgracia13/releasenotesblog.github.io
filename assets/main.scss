@@ -128,11 +128,6 @@ code {
 
 pre code { background: none; border: none; color: inherit; padding: 0; }
 
-.site-footer {
-  border-top: 2px solid $border;
-  background: $main;
-}
-
 a:focus-visible, button:focus-visible {
   outline: 3px solid #88aaee;
   outline-offset: 2px;
