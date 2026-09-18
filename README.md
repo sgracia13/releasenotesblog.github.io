@@ -32,11 +32,12 @@ appear. This is the single most common reason a post doesn't show up.
 
 Nothing in this folder is published — `_config.yml` excludes it.
 
-- `style.scss` — a stylesheet that pushes the default theme toward
-  neobrutalism. **Once you've posted a few times**, move it to
-  `assets/css/style.scss` and it takes effect on the next commit. Don't do this
-  first; find out whether you'll keep writing before spending time on how it
-  looks.
+The neobrutalist stylesheet used to live here. It now lives at
+`assets/main.scss`, which is the only filename the `minima` theme actually
+loads. If you move it anywhere else (`assets/css/style.scss`, for example)
+Jekyll still compiles it, but no page links to it and the site silently renders
+with the stock theme.
+
 - `blog-boilerplate.jsx` — a full React version of this blog styled with
   neobrutalism components. It needs a build pipeline, so it isn't wired up
   here. Keep it as a design reference and as the upgrade path if this becomes
