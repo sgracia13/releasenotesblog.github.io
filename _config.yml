@@ -1,13 +1,12 @@
 title: Release Notes by Seb
-description: Attempting to teach everyone how computers and mobile devices work.
+description: "Attempting to teach everyone (and I mean everyone) about computers, mobile devices and performance engineering. Everything bite-sized."
 theme: minima
 
-# Name shows up in the footer and the RSS feed.
+# Name shows up in the RSS feed. (The site footer was removed.)
 author: Sebastian Gracia
 
 # Files Jekyll should ignore when building the site.
-# _reference holds the React boilerplate and the neobrutalism stylesheet,
-# neither of which should be published yet.
+# _reference holds the React boilerplate, which isn't wired up yet.
 exclude:
   - _reference
   - README.md
